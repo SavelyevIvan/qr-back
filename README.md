@@ -1,0 +1,10 @@
+##Required environment variables
+
+```
+MONGO_URI
+PORT
+SECRET
+SECRET_JWT
+ACCESS_TOKEN_LIVE
+REFRESH_TOKEN_LIVE
+```

@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title><%= name ;%></title>
+</head>
+<body>
+<script>
+  const iOS = !!navigator.userAgent.match(/(iPad|iPhone|iPod)/i);
+  const links = {
+    fallback: '<%= fallback ;%>',
+    appStore: '<%= appStore ;%>',
+    googlePlay: '<%= googlePlay ;%>',
+  }
+  let link = links.fallback;
+
+  if (iOS && links.appStore) {
+    link = links.appStore;
+  }
+
+  const ua = navigator.userAgent.toLowerCase();
+  const isAndroid = ua.indexOf("android") > -1;
+  if (isAndroid && links.googlePlay) {
+    link = links.googlePlay;
+  }
+
+  if (link) {
+    window.location.href = link;
+  }
+</script>
+</body>
+</html>

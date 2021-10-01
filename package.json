@@ -1,0 +1,44 @@
+{
+  "name": "qr-codes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "start:dev": "node-dev src/app.js",
+    "lint": "eslint --debug src/",
+    "lint:fix": "eslint --debug src/ --fix",
+    "prettier": "prettier --check src/",
+    "prettier:fix": "prettier --write src/",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "argon2": "^0.27.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.3",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "node-dev": "^6.7.0",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write --ignore-unknown"
+  }
+}
